@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominion Nursery and Primary School</title>
+    <meta name="description" content="Dominion Nursery and Primary School - Where Knowledge Makes You Rule">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#1d4ed8",
+                        accent: "#f59e0b",
+                        schoolGreen: "#065f46",
+                        schoolGold: "#d97706"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-12 h-12 rounded-full bg-schoolGreen flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-schoolGreen">DOMINION NURSERY & PRIMARY SCHOOL</h1>
+                        <p class="text-sm text-gray-600 italic">"Knowledge Makes You Rule"</p>
+                    </div>
+                </div>
+                
+                <nav class="w-full md:w-auto">
+                    <ul id="nav-list" class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6"></ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="mb-12 bg-gradient-to-r from-schoolGreen to-primary rounded-2xl p-8 text-white shadow-xl">
+            <div class="max-w-3xl">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Welcome to Dominion School</h2>
+                <p class="text-xl mb-6">Excellence in early childhood and primary education since 2005</p>
+                <div class="flex flex-wrap gap-4">
+                    <button id="new-student-btn" class="bg-accent hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        <i class="fas fa-user-plus mr-2"></i>New Student Registration
+                    </button>
+                    <button id="old-student-btn" class="bg-white hover:bg-gray-100 text-primary font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        <i class="fas fa-user-check mr-2"></i>Returning Student Portal
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- School Administration -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-serif font-bold text-schoolGreen mb-8 text-center">School Administration</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-accent">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full bg-schoolGreen/10 flex items-center justify-center mr-4">
+                            <i class="fas fa-crown text-schoolGreen text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Proprietress</h3>
+                            <p class="text-lg text-primary font-semibold">Mrs. Grace Williams</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                        <p class="text-lg">+234 801 234 5678</p>
+                    </div>
+                    <p class="mt-4 text-gray-700">With over 20 years of experience in childhood education, Mrs. Williams ensures our school maintains the highest standards of academic excellence.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="fas fa-user-tie text-primary text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Proprietor</h3>
+                            <p class="text-lg text-primary font-semibold">Mr. David Williams</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                        <p class="text-lg">+234 802 345 6789</p>
+                    </div>
+                    <p class="mt-4 text-gray-700">Mr. Williams oversees school operations and infrastructure, ensuring a safe and conducive learning environment for all students.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Portals Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- New Student Registration Form -->
+            <section id="new-student-section" class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-schoolGreen mb-6 flex items-center">
+                    <i class="fas fa-user-plus mr-3 text-accent"></i>New Student Registration
+                </h2>
+                <form id="new-student-form" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Student's Full Name</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Date of Birth</label>
+                            <input type="date" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-2">Parent/Guardian Name</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Parent's Phone Number</label>
+                            <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Class Applying For</label>
+                            <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select Class</option>
+                                <option value="nursery">Nursery 1</option>
+                                <option value="nursery2">Nursery 2</option>
+                                <option value="nursery3">Nursery 3</option>
+                                <option value="primary1">Primary 1</option>
+                                <option value="primary2">Primary 2</option>
+                                <option value="primary3">Primary 3</option>
+                                <option value="primary4">Primary 4</option>
+                                <option value="primary5">Primary 5</option>
+                                <option value="primary6">Primary 6</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-2">Passport Photograph</label>
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                            <i class="fas fa-camera text-3xl text-gray-400 mb-2"></i>
+                            <p class="text-gray-500">Click to upload passport photograph</p>
+                            <p class="text-sm text-gray-400 mt-1">JPEG or PNG, max 2MB</p>
+                            <input type="file" accept="image/*" required class="hidden" id="passport-upload">
+                            <button type="button" onclick="document.getElementById('passport-upload').click()" class="mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-secondary transition duration-300">
+                                Choose File
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-schoolGreen hover:bg-emerald-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Registration
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Returning Student Portal -->
+            <section id="old-student-section" class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-schoolGreen mb-6 flex items-center">
+                    <i class="fas fa-user-check mr-3 text-primary"></i>Returning Student Portal
+                </h2>
+                
+                <!-- Result Checker -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Check Student Result</h3>
+                    <form id="result-check-form" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Student ID Number</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="e.g., DNS/2023/001">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Term</label>
+                            <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select Term</option>
+                                <option value="first">First Term</option>
+                                <option value="second">Second Term</option>
+                                <option value="third">Third Term</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Session</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="e.g., 2023/2024">
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-search mr-2"></i>Check Result
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Password Code Generator -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Generate Student Access Code</h3>
+                    <form id="code-generator-form" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Student Full Name</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="As registered in school">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Date of Birth</label>
+                            <input type="date" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <button type="submit" class="w-full bg-accent hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-key mr-2"></i>Generate Access Code
+                        </button>
+                    </form>
+                    
+                    <div id="code-display" class="mt-6 p-4 bg-gray-100 rounded-lg hidden">
+                        <h4 class="font-semibold text-gray-800 mb-2">Your Access Code:</h4>
+                        <div class="flex items-center justify-between">
+                            <code class="text-2xl font-mono font-bold text-primary" id="generated-code"></code>
+                            <button id="copy-code-btn" class="text-primary hover:text-secondary">
+                                <i class="fas fa-copy text-xl"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Use this code to access your student portal and results</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- School Motto Display -->
+        <section class="mb-12 text-center">
+            <div class="bg-gradient-to-r from-schoolGold to-accent p-1 rounded-full inline-block">
+                <div class="bg-white rounded-full px-8 py-4">
+                    <h2 class="text-3xl font-serif font-bold text-schoolGreen">"KNOWLEDGE MAKES YOU RULE"</h2>
+                    <p class="text-gray-600 mt-2">- Dominion School Motto</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-serif font-bold text-schoolGreen mb-8 text-center">Quick Links</h2>
+            <div id="quick-links" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-schoolGreen text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Dominion School</h3>
+                    <p class="text-gray-300">Providing quality education since 2005. We nurture young minds to become future leaders.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Contact Information</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-accent"></i>
+                            <span>12 Education Road, Academic City, Lagos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-accent"></i>
+                            <span>+234 803 456 7890 (School Office)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-accent"></i>
+                            <span>info@dominionschool.edu.ng</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">School Hours</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>7:30 AM - 2:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Extra Lessons</span>
+                            <span>2:30 PM - 4:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Office Hours</span>
+                            <span>7:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-gray-300">
+                <p>&copy; 2023 Dominion Nursery and Primary School. All rights reserved.</p>
+                <p class="mt-2 text-sm">"Knowledge Makes You Rule"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data Layer
+        const navigationItems = [
+            { "label": "Home", "href": "#home", "icon": "fas fa-home" },
+            { "label": "Admissions", "href": "#admissions", "icon": "fas fa-user-graduate" },
+            { "label": "Academics", "href": "#academics", "icon": "fas fa-book-open" },
+            { "label": "Portal", "href": "#portal", "icon": "fas fa-laptop-house" },
+            { "label": "Calendar", "href": "#calendar", "icon": "fas fa-calendar-alt" },
+            { "label": "Contact", "href": "#contact", "icon": "fas fa-phone-alt" }
+        ];
+
+        const quickLinks = [
+            { "title": "School Calendar", "description": "Academic year schedule", "icon": "fas fa-calendar", "color": "bg-primary" },
+            { "title": "Download Forms", "description": "Admission & other forms", "icon": "fas fa-file-download", "color": "bg-secondary" },
+            { "title": "School Fees", "description": "Fee structure & payment", "icon": "fas fa-money-check-alt", "color": "bg-schoolGreen" },
+            { "title": "Parent Portal", "description": "For parents & guardians", "icon": "fas fa-users", "color": "bg-accent" }
+        ];
+
+        // Reusable Render Functions
+        function renderNavItems(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" class="flex items-center text-gray-700 hover:text-primary font-medium transition duration-300">
+                        <i class="${item.icon} mr-2"></i>${item.label}
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        function renderQuickLinks(items) {
+            return items.map(item => 
+                `<a href="#" class="block p-4 rounded-xl ${item.color} text-white hover:opacity-90 transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-3">
+                            <i class="${item.icon}"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">${item.title}</h3>
+                    </div>
+                    <p class="text-white/80">${item.description}</p>
+                </a>`
+            ).join("");
+        }
+
+        // Initialize Page Content
+        document.getElementById("nav-list").innerHTML = renderNavItems(navigationItems);
+        document.getElementById("quick-links").innerHTML = renderQuickLinks(quickLinks);
+
+        // Form Handling and Interactive Features
+        document.addEventListener("DOMContentLoaded", function() {
+            // Navigation button functionality
+            document.getElementById("new-student-btn").addEventListener("click", function() {
+                document.getElementById("new-student-section").scrollIntoView({ 
+                    behavior: "smooth", 
+                    block: "start" 
+                });
+            });
+
+            document.getElementById("old-student-btn").addEventListener("click", function() {
+                document.getElementById("old-student-section").scrollIntoView({ 
+                    behavior: "smooth", 
+                    block: "start" 
+                });
+            });
+
+            // New Student Form Submission
+            document.getElementById("new-student-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                alert("Registration submitted successfully! You will receive a confirmation email with your student ID.");
+                this.reset();
+            });
+
+            // Result Checker Form
+            document.getElementById("result-check-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                // In a real application, this would fetch from a database
+                const sampleResults = {
+                    "student": "John Adebayo",
+                    "class": "Primary 5",
+                    "term": "Second Term 2023/2024",
+                    "subjects": [
+                        { "name": "Mathematics", "score": 85, "grade": "A" },
+                        { "name": "English Language", "score": 78, "grade": "B" },
+                        { "name": "Basic Science", "score": 92, "grade": "A" },
+                        { "name": "Social Studies", "score": 88, "grade": "A" },
+                        { "name": "Quantitative Reasoning", "score": 90, "grade": "A" }
+                    ],
+                    "total": 433,
+                    "average": 86.6,
+                    "position": "5th out of 40"
+                };
+                
+                // Display results in an alert (in real app, would show in a modal)
+                alert(`Result for ${sampleResults.student} (${sampleResults.class})\n\n` +
+                      `Term: ${sampleResults.term}\n` +
+                      `Total Score: ${sampleResults.total}/500\n` +
+                      `Average: ${sampleResults.average}%\n` +
+                      `Class Position: ${sampleResults.position}\n\n` +
+                      `Full result slip has been sent to your registered email.`);
+            });
+
+            // Code Generator Form
+            document.getElementById("code-generator-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                // Generate a random 8-character alphanumeric code
+                const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+                let code = "";
+                for (let i = 0; i < 8; i++) {
+                    code += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                
+                // Display the generated code
+                document.getElementById("generated-code").textContent = code;
+                document.getElementById("code-display").classList.remove("hidden");
+                
+                // Scroll to the code display
+                document.getElementById("code-display").scrollIntoView({ 
+                    behavior: "smooth", 
+                    block: "center" 
+                });
+            });
+
+            // Copy Code Functionality
+            document.getElementById("copy-code-btn").addEventListener("click", function() {
+                const code = document.getElementById("generated-code").textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalIcon = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check text-xl"></i>';
+                    setTimeout(() => {
+                        this.innerHTML = originalIcon;
+                    }, 2000);
+                });
+            });
+
+            // Delegated event handling for all navigation links
+            document.addEventListener("click", function(event) {
+                const link = event.target.closest("a[href^='#']");
+                if (!link) return;
+                
+                const href = link.getAttribute("href");
+                if (href === "#home") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    event.preventDefault();
+                }
+                // Other hash links would be handled here in a real application
+            });
+        });
+    </script>
+</body>
+</html>
